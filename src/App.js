@@ -1,7 +1,13 @@
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Pricing from "./Pages/Pricing";
+import Tokens from "./Pages/Tokens";
 import Box from '@mui/material/Box';
+import Blog from "./Pages/Blog";
+import Contact from "./Pages/Contact";
+import Errornot from "./Pages/Errornot";
+
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -17,7 +23,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/tokens" element={<Tokens />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/error" element={<Errornot />} />
       </Routes>
     </Router>
 

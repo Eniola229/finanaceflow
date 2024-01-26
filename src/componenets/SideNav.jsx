@@ -84,7 +84,7 @@ export default function SideNav() {
   </ListItem>
 
   <ListItem disablePadding>
-    <ListItemButton component={Link} to="/" style={{ textDecoration: 'none', color: 'white', fontSize: '30px', display: 'inline-block', margin: '10px' }}>
+    <ListItemButton component={Link} to="/tokens" style={{ textDecoration: 'none', color: 'white', fontSize: '30px', display: 'inline-block', margin: '10px' }}>
       <ListItemIcon>
         <InboxIcon />
       </ListItemIcon>
@@ -95,7 +95,7 @@ export default function SideNav() {
   </ListItem>
 
   <ListItem disablePadding>
-    <ListItemButton component={Link} to="/" style={{ textDecoration: 'none', color: 'white', fontSize: '30px', display: 'inline-block', margin: '10px' }}>
+    <ListItemButton component={Link} to="/blog" style={{ textDecoration: 'none', color: 'white', fontSize: '30px', display: 'inline-block', margin: '10px' }}>
       <ListItemIcon>
         <InboxIcon />
       </ListItemIcon>
@@ -106,7 +106,7 @@ export default function SideNav() {
   </ListItem>
 
   <ListItem disablePadding>
-    <ListItemButton component={Link} to="/" style={{ textDecoration: 'none', color: 'white', fontSize: '30px', display: 'inline-block', margin: '10px' }}>
+    <ListItemButton component={Link} to="/contact" style={{ textDecoration: 'none', color: 'white', fontSize: '30px', display: 'inline-block', margin: '10px' }}>
       <ListItemIcon>
         <InboxIcon />
       </ListItemIcon>

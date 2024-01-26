@@ -66,13 +66,13 @@ function Header() {
           <Link to="/pricing" style={{ margin:"10px", textDecoration: 'none', color: 'white', fontSize:"15px" }}>
             PRICING
         </Link>
-         <Link to="/" style={{ margin:"10px", textDecoration: 'none', color: 'white', fontSize:"15px" }}>
+         <Link to="/tokens" style={{ margin:"10px", textDecoration: 'none', color: 'white', fontSize:"15px" }}>
             TOKENS
          </Link>
-          <Link to="/" style={{ margin:"10px", textDecoration: 'none', color: 'white', fontSize:"15px" }}>
+          <Link to="/blog" style={{ margin:"10px", textDecoration: 'none', color: 'white', fontSize:"15px" }}>
             BLOG
           </Link>
-          <Link to="/" style={{ margin:"10px", textDecoration: 'none', color: 'white', fontSize:"15px" }}>
+          <Link to="/contact" style={{ margin:"10px", textDecoration: 'none', color: 'white', fontSize:"15px" }}>
             CONTACT US
          </Link>
         </Box>
