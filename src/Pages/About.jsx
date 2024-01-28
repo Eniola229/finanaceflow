@@ -34,28 +34,31 @@ function About() {
   <Header/>
 
     <Box sx={{ margin: 'auto',
-          justifyContent: 'center',
-          textAlign:"center",
+           justifyContent: { xs: 'left', md: 'center' },
+           textAlign:{ xs: 'left', md: 'center' },
            width: { xs: '90%', md: '70%', lg: '50%' },
+           marginBottom:"20px"
         }}>
       <Typography  sx={{color:"white", fontSize:"40px", fontWeight:"bold"}}>
         About Finance Flow
       </Typography>
       <Typography  sx={{color:"white"}}>
-        ALorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aenean dis placerat. Scelerisque imperdiet vitae dolor non aliquam. Malesuada.
+        ALorem ipsum dolor sit amet, consectetur adipiscing elit.  Dis placerat. Scelerisque imperdiet vitae dolor non aliquam. Malesuada.
       </Typography>
   </Box>
-   <Box sx={{height:"70px", width:'100%', marginTop:"5%", display:"flex", justifyContent:"space-around"}}>
-        <Typography sx={{fontSize:"32px", color:"white"}}>
-            What drives Finance Flow?
-        </Typography>
-         
-          <Typography sx={{width:"40%", fontSize:"16px", color:"white"}}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit non neque orci amet, amet .
-          </Typography>
-      </Box>
-
-
+ <Box sx={{ margin: 'auto',
+          justifyContent: { xs: 'left', md: 'center' },
+          textAlign:{ xs: 'left', md: 'center' },
+           width: { xs: '90%', md: '70%', lg: '50%' },
+            marginBottom:"20px"
+        }}>
+      <Typography  sx={{color:"white", fontSize:"40px", fontWeight:"bold"}}>
+        What drives Finance Flow?
+      </Typography>
+      <Typography  sx={{color:"white"}}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.
+      </Typography>
+  </Box>
 
        
       <Box sx={{display:"flex", flexWrap:"wrap", width:"70%", justifyContent:"center", gap:"20px", margin:"auto", flexWrap:"wrap"}}>
@@ -149,21 +152,21 @@ function About() {
 
       <Box sx={{display:"flex", flexWrap:"wrap", gap:"20px", justifyContent:"space-around", backgroundColor:"#010D50", marginTop:"7%"}}>
 
-        <Box sx={{width:"360px",borderRadius:"35px", backgroundColor:"transparent"}}>
+        <Box sx={{ width: { xs: '100%', md: '360px' }, borderRadius:"35px", backgroundColor:"transparent"}}>
             
-            <Box sx={{marginTop:"7%", marginLeft:"10%", width:"400px", gap:"20px"}}>
+            <Box sx={{marginTop:"7%", marginLeft:{ xs: '1%', md: '10%' }, width: { xs: '100%', md: '400px' }, gap:"20px"}}>
                <Typography sx={{fontSize:"20px", fontFamily:"monospace",  marginTop:"2%", color:"white", fontWeight:"900"}}>
                  Our mission
                </Typography>
                <Typography sx={{ color:"white", fontSize:"12px", lineHieght:"32px"}}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Parturient lorem purus justo, ultricies. Sollicitudin odio elementum urna placerat lacus, vulputate. Non malesuada viverra et ultrices cras. Tincidunt tempor, blandit augue ac feugiat. Praesent arcu tempus ullamcorper quisque in. Magna fermentum, lacus, fermentum arcu.
             </Typography>
-            <Typography sx={{ color:"white", fontSize:"12px", lineHieght:"32px", marginTop:"5%"}}>
+            <Typography sx={{ color:"white", fontSize:"12px",  lineHieght:"32px", marginTop:"5%"}}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Parturient lorem purus justo, ultricies. Sollicitudin odio elementum urna placerat lacus, vulputate. Non malesuada viverra et ultrices cras. Tincidunt tempor, blandit augue ac feugiat. Praesent arcu tempus ullamcorper quisque in. Magna fermentum, lacus, fermentum arcu.
             </Typography>
             </Box>
 
-            <Box sx={{marginTop:"7%", marginLeft:"10%", width:"400px", gap:"20px"}}>
+            <Box sx={{marginTop:"7%", marginLeft:{ xs: '1%', md: '10%' },  width: { xs: '100%', md: '400px' }, gap:"20px"}}>
                <Typography sx={{fontSize:"20px", fontFamily:"monospace",  marginTop:"2%", color:"white", fontWeight:"900"}}>
                  Our story
                </Typography>
@@ -177,7 +180,7 @@ function About() {
       </Box>
         <img
           src={planet}
-          style={{width:"500px", height:"500px"}}
+          style={{width:"400px", height:"400px"}}
         />
       </Box>
 
@@ -338,13 +341,13 @@ function About() {
             </Box>
       </Box>
 
-     <Box sx={{height:"70px", width:'100%', marginTop:"5%", display:"flex", flexWrap:"wrap", justifyContent:"space-around"}}>
+     <Box sx={{height:"70px", width:'100%', marginTop:"5%", display:"flex", marginBottom:"30px", flexWrap:"wrap", justifyContent:"space-around"}}>
         <Typography sx={{fontSize:"32px", color:"white"}}>
 
             Our Team
         </Typography>
          
-          <Typography sx={{width:"30%", fontSize:"16px", color:"white"}}>
+          <Typography sx={{ width: { xs: '50%', md: '30%', lg: '30%' }, fontSize:"16px", color:"white"}}>
            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Parturient lorem purus justo, ultricies.
           </Typography>
       </Box>
@@ -405,7 +408,9 @@ function About() {
     fontSize: "12px",
     alignItems: "center",
     textAlign: "center",
-    width:"20%"
+    width: { xs: '50%', md: '20%', lg: '20%' }
+   
+
   }}
 >
   FLorem ipsum dolor sit amet, consectetur adipiscing elit. Parturient lorem purus justo, ultricies.

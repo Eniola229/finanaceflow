@@ -23,9 +23,10 @@ function Tokens() {
   <Header/>
 
     <Box sx={{ margin: 'auto',
-          justifyContent: 'center',
-          textAlign:"center",
+           justifyContent: { xs: 'left', md: 'center' },
+          textAlign:{ xs: 'left', md: 'center' },
            width: { xs: '90%', md: '70%', lg: '50%' },
+           marginBottom:"30px"
         }}>
       <Typography  sx={{color:"white", fontSize:"40px", fontWeight:"bold"}}>
         Tokens

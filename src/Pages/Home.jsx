@@ -44,7 +44,7 @@ function Home() {
       margin: 'auto',
       justifyContent: 'center',
       alignItems: 'center',
-      bgcolor:"transparent"
+      bgcolor:"transparent",
 }}>
      <Header/>
        <Container
@@ -54,15 +54,16 @@ function Home() {
         maxWidth: "100%",
         padding: "40px",
         display: "flex",
-        flexDirection: isMobile ? "column" : "row", // Change direction to column for mobile
+        flexDirection: isMobile ? "column" : "row",
         justifyContent: "space-between",
         alignItems: "center",
         margin: "auto",
+
       }}
     >
       {/* Text Content */}
       <Box sx={{ bgcolor: "transparent", maxWidth: isMobile ? "100%" : "60%", flexBasis: "100%" }}>
-        <Typography sx={{ fontSize: "40px", color: "white", fontWeight: "bold", fontFamily: "monospace", width: "100%" }}>
+        <Typography sx={{ fontSize: isMobile ? "28px" : "40px", color: "white", fontWeight: "bold", fontFamily: "monospace", width: "100%" }}>
           Buy, trade, and hold 350+ cryptocurrencies
         </Typography>
         <Typography sx={{ fontSize: "18px", color: "white", width: "100%", maxWidth: "600px" }}>
@@ -73,7 +74,7 @@ function Home() {
             sx={{
               backgroundColor: "rgba(43, 33, 154, 1)",
               color: "white",
-              width: "150px",
+              width: "200px",
               borderRadius: "30px",
               fontSize: "12px",
               height: "56px",
@@ -86,7 +87,7 @@ function Home() {
             sx={{
               backgroundColor: "rgba(71, 64, 64, 1)",
               color: "white",
-              width: "150px",
+              width: "200px",
               borderRadius: "30px",
               fontSize: "12px",
               height: "56px",
@@ -110,7 +111,7 @@ function Home() {
         }}
       >
         <img
-          src={widescreen}
+          src={smallscreen}
           alt="Logo"
           style={{
             width: '100%',
@@ -129,6 +130,7 @@ function Home() {
         margin: "auto",
         overflowY: { xs: 'auto', md: 'hidden' },
         height: { xs: 'auto', md: '99px' },
+
       }}
     >
       <Typography  sx={{fontSize:"15px",  color:"white", textAlign:"center"}}>
@@ -143,7 +145,6 @@ function Home() {
         alignItems: "center",
         gap:"20px",
         justifyContent: { xs: "center", md: "center" },
-        
       }}
     >
 
@@ -160,7 +161,9 @@ function Home() {
     margin: "auto",
     justifyContent: { xs: "center", sm: "left" },
     alignItems: { xs: "center", sm: "left" },
-    textAlign: { xs: "center", sm: "left" },}}>
+    textAlign: { xs: "center", sm: "left" },
+
+  }}>
         <Box sx={{ padding: "20px",}}>
           <Typography  sx={{fontSize:"35px",  textAlign: { xs: "left", sm: "center" }}}>
               Build your crypto portfolio
@@ -169,41 +172,38 @@ function Home() {
              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aen
           </Typography>
 
-    <Container sx={{
-      width: '90%',
+     <Container sx={{
+      width: '100%',
       margin: 'auto',
-      justifyContent: { xs: "column", md: "center" },
-      alignItems: { xs: "column", md: "center" },
-      bgcolor:"transparent",
-      display:"flex",
-      flexWrap:"wrap"
+      justifyContent: { xs: "left", md: "center" },
+      alignItems: { xs: "left", md: "center" },
+      bgcolor: "transparent",
+      display: "flex",
+      flexWrap: "wrap"
+    }}>
+      <Box sx={{ minWidth: 50, justifyContent: "space-around" }}>
+        <Card sx={{ height: "200px", width: "200px", bgcolor: "#010D50", borderRadius: "40px", margin: "10px" }}>
+          <img
+            src={divone}
+            alt="div"
+            style={{
+              marginTop: "20%",
+              width: '68px',
+              height: '68px',
+              marginLeft: '10%',
+              marginRight: 'auto',
+              display: 'block',
+            }}
+          />
+          <Typography sx={{ color: "white", textAlign: "left", marginLeft: "10%" }}>
+            Send & Receive
+          </Typography>
+          <Typography sx={{ fontSize: "12px", textAlign: "left", fontWeight: "lighter", fontSize: "11px", color: "white", marginLeft: "10%" }}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.
+          </Typography>
+        </Card>
 
-}}>
-              <Box sx={{ minWidth: 50, justifyContent:"space-around" }}>
-                  <Card sx={{height:"200px", width:"200px", bgcolor:"#010D50", borderRadius:"40px", margin:"10px"}}>
-                      
-                   <img
-                    src={divone} 
-                    alt="div"
-                    style={{
-                      marginTop:"20%",
-                      width: '68px',  
-                      height: '68px',
-                      marginLeft: '10%',  
-                      marginRight: 'auto',   
-                      display: 'block', 
-                    }}
-                  />
-                    <Typography sx={{color:"white", textAlign:"left", marginLeft:"10%"}}>
-                        Send & Receive
-                    </Typography>
-                    
-                    <Typography sx={{fontSize:"12px", textAlign:"left", fontWeight:"lighter", fontSize:"11px", color:"white", marginLeft:"10%"}}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.
-                    </Typography>
-                    <
-                   /Card>
-                   <Card sx={{height:"200px", width:"200px", bgcolor:"#010D50", borderRadius:"40px", margin:"10px"}}>
+            <Card sx={{height:"200px", width:"200px", bgcolor:"#010D50", borderRadius:"40px", margin:"10px"}}>
                       
                    <img
                     src={divtwo} 
@@ -217,8 +217,6 @@ function Home() {
                       display: 'block', 
                     }}
                   />
-
-
                     <Typography sx={{color:"white", textAlign:"left", marginLeft:"10%"}}>
                         100% Secure Wallet
                     </Typography>
@@ -229,88 +227,79 @@ function Home() {
                     <
                    /Card>
 
-             </Box>
-                 <Box sx={{ minWidth: 50, justifyContent: "space-around" }}>
-              <Card
-                sx={{
-                  height: "400px",
-                  width: "300px",
-                  bgcolor: "#0328EE",
-                  borderRadius: "40px",
-                  margin: "10px",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  textAlign: "left",
-                }}
-              >
-                <Typography sx={{ color: "white", textAlign: "left", textSize:"20px", marginTop: "10%", marginRight: "30%" }}>
-                  iOS & Android App
-                </Typography>
-                <Typography sx={{ marginLeft: "5%", fontSize: "10px", color: "white", textAlign: "left", marginTop: "5%" }}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In amet, morbi non at sed neque.
-                </Typography>
-                <img
-                  src={pwidescreen}
-                  style={{ width: "254px", marginTop: "5%" }}
-                />
-              </Card>
-            </Box>
-             
-             <Box sx={{ minWidth: 50, justifyContent:"space-around" }}>
-                   <Card sx={{height:"200px", width:"200px", bgcolor:"#010D50", borderRadius:"40px", margin:"10px"}}>
-                      
-                   <img
-                    src={divthree} 
-                    alt="div"
-                    style={{
-                      marginTop:"20%",
-                      width: '68px',  
-                      height: '68px',
-                      marginLeft: '10%',  
-                      marginRight: 'auto',   
-                      display: 'block', 
-                    }}
-                  />
 
+      </Box>
 
-                    <Typography sx={{color:"white", textAlign:"left", marginLeft:"10%"}}>
-                        Trading Charts
-                    </Typography>
-                    
-                    <Typography sx={{fontSize:"12px", textAlign:"left", fontWeight:"lighter", fontSize:"11px", color:"white", marginLeft:"10%"}}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.
-                    </Typography>
-                    <
-                   /Card>
-                    <Card sx={{height:"200px", width:"200px", bgcolor:"#010D50", borderRadius:"40px", margin:"10px"}}>
-                      
-                   <img
-                    src={divfour} 
-                    alt="div"
-                    style={{
-                      marginTop:"20%",
-                      width: '68px',  
-                      height: '68px',
-                      marginLeft: '10%',  
-                      marginRight: 'auto',   
-                      display: 'block', 
-                    }}
-                  />
+      <Box sx={{ minWidth: 50, marginLeft:{xs:"-20%", md:"0"}, justifyContent: "space-around" }}>
+        <Card sx={{
+          height: "400px",
+          width: "300px",
+          bgcolor: "#0328EE",
+          borderRadius: "40px",
+          marginLeft: "0",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "left",
+        }}>
+          <Typography sx={{ color: "white", textAlign: "left", fontSize: "20px", marginTop: "10%", marginRight: "30%" }}>
+            iOS & Android App
+          </Typography>
+          <Typography sx={{ marginLeft: "5%", fontSize: "10px", color: "white", textAlign: "left", marginTop: "5%" }}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In amet, morbi non at sed neque.
+          </Typography>
+          <img
+            src={pwidescreen}
+            style={{ width: "254px", marginTop: "5%" }}
+          />
+        </Card>
+      </Box>
 
+      <Box sx={{ minWidth: 50, justifyContent: "space-around" }}>
+        <Card sx={{ height: "200px", width: "200px", bgcolor: "#010D50", borderRadius: "40px", margin: "10px" }}>
+          <img
+            src={divthree}
+            alt="div"
+            style={{
+              marginTop: "20%",
+              width: '68px',
+              height: '68px',
+              marginLeft: '10%',
+              marginRight: 'auto',
+              display: 'block',
+            }}
+          />
+          <Typography sx={{ color: "white", textAlign: "left", marginLeft: "10%" }}>
+            Trading Charts
+          </Typography>
+          <Typography sx={{ fontSize: "12px", textAlign: "left", fontWeight: "lighter", fontSize: "11px", color: "white", marginLeft: "10%" }}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.
+          </Typography>
+        </Card>
 
-                    <Typography sx={{color:"white", textAlign:"left", marginLeft:"10%"}}>
-                        Real Time Trading
-                    </Typography>
-                    
-                    <Typography sx={{fontSize:"12px", textAlign:"left", fontWeight:"lighter", fontSize:"11px", color:"white", marginLeft:"10%"}}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.
-                    </Typography>
-                    <
-                   /Card>
-             </Box>
-          </Container>
+        <Card sx={{ height: "200px", width: "200px", bgcolor: "#010D50", borderRadius: "40px", margin: "10px" }}>
+          <img
+            src={divfour}
+            alt="div"
+            style={{
+              marginTop: "20%",
+              width: '68px',
+              height: '68px',
+              marginLeft: '10%',
+              marginRight: 'auto',
+              display: 'block',
+            }}
+          />
+          <Typography sx={{ color: "white", textAlign: "left", marginLeft: "10%" }}>
+            Real Time Trading
+          </Typography>
+          <Typography sx={{ fontSize: "12px", textAlign: "left", fontWeight: "lighter", fontSize: "11px", color: "white", marginLeft: "10%" }}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.
+          </Typography>
+        </Card>
+      </Box>
+    </Container>
           <Button
                   sx={{ justifyContent:"center", margin:"auto", backgroundColor:"rgba(43, 33, 154, 1)", color:"white", width:"210px", borderRadius:"30px", size:"16px", height:"56px", padding:"27px 37px 20px 37px",  display: { xs: 'none', md: 'flex' },}}
                   >Download App
@@ -321,36 +310,21 @@ function Home() {
 
     <Container sx={{
         bgcolor: "transparent",
-        flexWrap: "wrap",
         maxWidth: "100%",
         padding: "40px",
-        display: "flex",
-        justifyContent:"space-around"
+        display: { xs: "inline-block", sm: "inline-block", md: "flex" },
+        justifyContent:"space-around",
+
       
       }}>
       
       
-        <Box sx={{ minWidth: 70, justifyContent:"space-around",  bgcolor: "transparent", }}>
-                  <Card
-                    sx={{
-                      bgcolor: "transparent",
-                      boxShadow: "none",
-                      margin: "10px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <img
-                      src={mpwidescreen}
-                      style={{
-                        width: { xs: "100px", sm: "324px", md: "401px" },
-                        marginTop: { xs: "5%", sm: "5%" },
-                      }}
-                      alt="Image"
-                    />
-                  </Card>
-             </Box>
+        <Box sx={{ justifyContent: "space-around", marginTop:"2%" }}>
+            <img
+              src={mpwidescreen}
+              style={{ marginLeft: "-260px", width: "100%", marginTop:"5%", maxWidth: { xs: "100%", sm: "301px", md: "460px" }, margin: "10px" }}
+            />
+        </Box>
              <Box sx={{ minWidth: 50, justifyContent:"space-around", marginTop:"5%"}}>
                   <Card sx={{ bgcolor:"transparent", boxShadow:"none", borderRadius:"40px", margin:"10px"}}>
                   <Typography sx={{ fontSize:"30px", fontWeight:"bold", color:"white", textAlign:"left", marginTop:"10%", marginLeft:"5%", marginRight:"20%"}}>
@@ -408,8 +382,8 @@ function Home() {
         bgcolor: "transparent",
         maxWidth: "100%",
         padding: "40px",
-        display: "flex",
-        flexWrap:"wrap"
+        display: { xs: "inline-block", sm: "inline-block", md: "flex" },
+
       }}>
          <Box sx={{ minWidth: 50, justifyContent:"space-around"}}>
                   <Card sx={{ bgcolor:"transparent", boxShadow:"none", borderRadius:"40px", margin:"10px"}}>
@@ -462,37 +436,43 @@ function Home() {
                   </Box>
                    </Box>
              </Box>
-      
-      <Box sx={{ justifyContent:"space-around"}}>
-                  <Card sx={{ bgcolor:"transparent", marginLeft:"-260px", boxShadow:"none", margin:"10px"}}>
-                    <img 
-                      src={smallscreen}
-                      style={{width:"601px", height:"390px", marginTop:"5%"}}
-                    />
-                   </Card>
-             </Box>
+          
+          <Box sx={{ justifyContent: "space-around", marginTop:"15%", }}>
+            <Card sx={{ bgcolor: "transparent", marginLeft: "-260px", boxShadow: "none", margin: "10px" }}>
+              <img
+                src={smallscreen}
+                style={{
+                  width: "100%",
+                  maxWidth: { xs: "100%", sm: "301px", md: "460px" },
+                  height: "auto", 
+                  maxHeight: "490px", 
+                  marginTop: "5%",
+                }}
+              />
+            </Card>
+          </Box>
+
       </Container> 
 
       <Box sx={{
-        height:"400px",
         backgroundColor:"#0328EE",
-        marginTop:"10%"
+        marginTop:"10%",
+
       }}>
 
          <Container sx={{
         bgcolor: "transparent",
         maxWidth: "100%",
         padding: "40px",
-        display: "flex",
-        flexWrap:"wrap"
+         display: { xs: "inline-block", sm: "inline-block", md: "flex" },
 
       }}>
-         <Box sx={{ justifyContent:"space-around", marginLeft:"10%", width:"500px", height:"auto"}}>
-                  <Card sx={{ bgcolor:"transparent", boxShadow:"none", borderRadius:"40px", margin:"10px"}}>
-                  <Typography sx={{ fontSize:"30px", fontWeight:"bold", color:"white", textAlign:"left", marginTop:"10%", marginLeft:"5%", marginRight:"20%"}}>
+         <Box sx={{ justifyContent:"space-around", marginLeft:{xs:"-10%", md:"10%"}, width:"500px", height:"auto"}}>
+                  <Card sx={{ bgcolor:"transparent", width:{xs:"70%", md:"auto"}, boxShadow:"none", borderRadius:"40px", margin:"10px"}}>
+                  <Typography sx={{ fontSize:"30px", fontWeight:"bold", color:"white", textAlign:"left", marginTop:"10%", marginLeft:{xs:"0", md:"5%"}, marginRight:"20%"}}>
                     Earn daily rewards on your idle tokens
                   </Typography>
-                  <Typography sx={{ marginLeft:"5%", fontSize:"15px", color:"white", textAlign:"left", marginTop:"5%"}}>
+                  <Typography sx={{ marginLeft:{xs:"0", md:"5%"}, width:{xs:"70%", md:"auto"}, fontSize:"15px", color:"white", textAlign:"left", marginTop:"5%"}}>
                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.
                   </Typography>
                    </Card>
@@ -508,27 +488,27 @@ function Home() {
                 fontSize: "12px",
                 height: "56px",
                 padding: "10px 20px",
-                marginLeft:"5%"
+                marginLeft:{sx:"0", md:"15%"}
               }}
             >
               Download App
             </Button>
-    </Box>
-                   </Box>
+           </Box>
+            </Box>
              </Box>
       
-      <Box sx={{ justifyContent:"space-around", marginTop:"15%"}}>
-                  <Card sx={{ bgcolor:"transparent", marginLeft:"-260px", boxShadow:"none", margin:"10px"}}>
-                     <img 
-                      src={mpwidescreen}
-                      style={{width:{ xs: "100%", sm: "301px", md: "460px" }}}
-                    />
-                   </Card>
-             </Box>
+          <Box sx={{ justifyContent: "space-around", marginTop: { sx: "10%", md: "-15%" } }}>
+            <img
+              src={mpwidescreen}
+              style={{ marginLeft: "-260px", width: "100%", maxWidth: { xs: "100%", sm: "301px", md: "460px" }, margin: "10px" }}
+            />
+          </Box>
+
+
       </Container> 
       </Box>
 
-      <Box sx={{height:"70px", width:'100%', marginTop:"5%", display:"flex", flexWrap:"wrap", justifyContent:"space-around"}}>
+      <Box sx={{width:'100%', marginTop:"5%", display:"flex", flexWrap:"wrap", marginBottom:"20px", justifyContent:"space-around"}}>
         <Typography sx={{fontSize:"32px", color:"white", fontFamily:"monospace"}}>
             What our users say?
         </Typography>
@@ -543,7 +523,7 @@ function Home() {
 
         <Box sx={{height:"222px", width:"360px", backgroundColor:"#010D50", borderRadius:"45px"}}>
         <Box sx={{width:"280px", marginTop:"10%", marginLeft:"8%"}}>
-            <Typography sx={{ color:"white", fontSize:"12px", lineHieght:"32px"}}>
+            <Typography sx={{ color:"white", fontSize:"12px", width:{xs:"80%", md:"auto"}}}>
               “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”
             </Typography>
             <Box sx={{marginTop:"7%", display:"flex"}}>
@@ -567,7 +547,7 @@ function Home() {
 
          <Box sx={{height:"222px", width:"360px", backgroundColor:"#0328EE", borderRadius:"45px"}}>
         <Box sx={{width:"280px", marginTop:"10%", marginLeft:"8%"}}>
-            <Typography sx={{ color:"white", fontSize:"12px", lineHieght:"32px"}}>
+            <Typography sx={{ color:"white", fontSize:"12px",  width:{xs:"80%", md:"auto"}}}>
               “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”
             </Typography>
             <Box sx={{marginTop:"7%", display:"flex"}}>
@@ -590,7 +570,7 @@ function Home() {
 
         <Box sx={{height:"222px", width:"360px", backgroundColor:"#010D50", borderRadius:"45px"}}>
         <Box sx={{width:"280px", marginTop:"10%", marginLeft:"8%"}}>
-            <Typography sx={{ color:"white", fontSize:"12px", lineHieght:"32px"}}>
+            <Typography sx={{ color:"white", fontSize:"12px", width:{xs:"80%", md:"auto"}}}>
               “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”
             </Typography>
             <Box sx={{marginTop:"7%", display:"flex"}}>
@@ -612,84 +592,95 @@ function Home() {
         </Box>
       </Box>
 
-       <Container sx={{
+        <Container
+      sx={{
         bgcolor: "transparent",
         maxWidth: "100%",
         padding: "40px",
-        display: "flex",
-        flexWrap:"wrap"
-      }}>
-         <Box sx={{ minWidth: 50, justifyContent:"space-around"}}>
-                  <Card sx={{ bgcolor:"transparent", boxShadow:"none", borderRadius:"40px", margin:"10px"}}>
-                  <Typography sx={{ fontSize:"30px", fontWeight:"bold", color:"white", textAlign:"left", marginTop:"10%", marginLeft:"5%", marginRight:"20%"}}>
-                    Get started today
-                  </Typography>
-                  <Typography sx={{ marginLeft:"5%", fontSize:"15px", color:"white", textAlign:"left", marginTop:"5%"}}>
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.
-                  </Typography>
-                   </Card>
-                   <Box>
-                   <Box sx={{display:"flex", height:"70px", marginLeft:"5%"}}>
-                    <img
-                      src={download} 
-                      alt=""
-                      style={{
-                        width: '46px',  
-                        height: '46px',
-                      }}
-                    />
-                  <Typography sx={{ fontSize:"15px", fontWeight:"bold", color:"white", textAlign:"left", margin:"5px 5px 5px 5px", marginLeft:"5%"}}>
-                      Download app
-                  </Typography>
-                  </Box>
-                  <Box sx={{display:"flex", height:"70px", marginLeft:"5%"}}>
-                    <img
-                      src={pro} 
-                      alt="div"
-                      style={{
-                        width: { xs: "26", sm: "36px", md: "46px" },
-                        height: '46px',
-                      }}
-                    />
-                  <Typography sx={{ fontSize:"15px", fontWeight:"bold", color:"white", textAlign:"left", margin:"5px 5px 5px 5px", marginLeft:"5%"}}>
-                    Create a free account
-                  </Typography>
-                  </Box>
-                  <Box sx={{display:"flex", height:"70px", marginLeft:"5%"}}>
-                    <img
-                      src={money} 
-                      alt="div"
-                      style={{
-                        width: '46px',  
-                        height: '46px',
-                      }}
-                    />
-                    <Typography sx={{ fontSize:"15px", fontWeight:"bold", color:"white", textAlign:"left", margin:"5px 5px 5px 5px", marginLeft:"5%"}}>
-                     Start trading
-                  </Typography>
-                  </Box>
-                   </Box>
-             </Box>
-      
-      <Box>
-            <img
-            src={video}
-            sx={{width:"600px", height:"300px"}}
-            />
-        </Box>
-      </Container> 
+        display: { xs: "inline-block", sm: "inline-block", md: "flex" },
 
-       <Box sx={{height:"70px", width:'100%', marginTop:"5%", display:"flex", justifyContent:"space-around"}}>
+      }}
+    >
+      <Box sx={{ minWidth: 50, justifyContent: "space-around" }}>
+        <Card sx={{ bgcolor: "transparent", boxShadow: "none", borderRadius: "40px", margin: "10px" }}>
+          <Typography sx={{ fontSize: "30px", fontWeight: "bold", color: "white", textAlign: "left", marginTop: "10%", marginLeft: "5%", marginRight: "20%" }}>
+            Get started today
+          </Typography>
+          <Typography sx={{ marginLeft: "5%", fontSize: "15px", color: "white", textAlign: "left", marginTop: "5%" }}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.
+          </Typography>
+        </Card>
+        <Box>
+          <Box sx={{ display: "flex", height: "70px", marginLeft: "5%" }}>
+            <img
+              src={download}
+              alt=""
+              style={{
+                width: '46px',
+                height: '46px',
+              }}
+            />
+            <Typography sx={{ fontSize: "15px", fontWeight: "bold", color: "white", textAlign: "left", margin: "5px 5px 5px 5px", marginLeft: "5%" }}>
+              Download app
+            </Typography>
+          </Box>
+          <Box sx={{ display: "flex", height: "70px", marginLeft: "5%" }}>
+            <img
+              src={pro}
+              alt="div"
+              style={{
+                width: '46px',
+                height: '46px',
+              }}
+            />
+            <Typography sx={{ fontSize: "15px", fontWeight: "bold", color: "white", textAlign: "left", margin: "5px 5px 5px 5px", marginLeft: "5%" }}>
+              Create a free account
+            </Typography>
+          </Box>
+          <Box sx={{ display: "flex", height: "70px", marginLeft: "5%" }}>
+            <img
+              src={money}
+              alt="div"
+              style={{
+                width: '46px',
+                height: '46px',
+              }}
+            />
+            <Typography sx={{ fontSize: "15px", fontWeight: "bold", color: "white", textAlign: "left", margin: "5px 5px 5px 5px", marginLeft: "5%" }}>
+              Start trading
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
+
+       <Box>
+          <img
+            src={video}
+            style={{
+              width: "100%",
+              maxWidth: { xs: "50%", sm: "100%", md: "200px" },
+              height: "auto",
+              maxHeight: "400px", 
+              marginTop: "15%"
+            }}
+            alt="Video Image"
+          />
+        </Box>
+
+
+    </Container>
+
+       <Box sx={{ width:'100%', marginTop:"5%", display:"flex",  marginBottom:"20px", justifyContent:"space-around"}}>
         <Typography sx={{fontSize:"32px", color:"white", fontFamily:"monospace"}}>
             Browse our latest news
         </Typography>
          
           <Typography sx={{width:"40%", fontSize:"16px", color:"white"}}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit non neque orci amet, amet .
+            Lorem ipsum dolor sit amet, consectetur.
           </Typography>
       </Box>
-      <Box sx={{height:"552px"}}>
-      <Box sx={{ justifyContent:"space-around", display:"flex", flexWrap:"wrap"}}>
+      <Box>
+      <Box sx={{ justifyContent:"space-around", gap:"10px", display:"flex",  flexWrap:"wrap"}}>
           <img
           src={blogcard}
           style={{width:"342px", height:"520px"}}
@@ -709,31 +700,36 @@ function Home() {
               >View All Articles
           </Button>
 
-          <Box sx={{height:"70px", width:'100%', marginTop:"5%", display:"flex", justifyContent:"space-around"}}>
+          <Box sx={{ width:'100%', marginTop:"5%", display:"flex", justifyContent:"space-around"}}>
         <Typography sx={{fontSize:"32px", color:"white", fontWeight:"bold", fontFamily:"monospace"}}>
             Download our app
         </Typography>
          
           <Typography sx={{width:"40%", fontSize:"16px", color:"white"}}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit non neque orci amet, amet .
+            Lorem ipsum dolor sit amet, consectetur.
           </Typography>
       </Box>
 
-       <Container sx={{ padding: "20px",  color: "white",
+  <Container sx={{ 
+    padding: "20px",  
+    color: "white",
     margin: "auto",
     justifyContent: "center",
     alignItems: "center",
-    textAlign: "center",}}>
-        <Box sx={{ padding: "20px",}}>
+    textAlign: "center",
+    marginLeft:{xs:"-17%", md:"0"},
+    
+  }}>
+
+    <Box sx={{ padding: "20px",}}>
 
     <Container sx={{
-      width: '90%',
       margin: 'auto',
       justifyContent: 'center',
       alignItems: 'center',
       bgcolor:"transparent",
       display:"flex",
-      flexWrap:"wrap"
+      flexWrap:"wrap",
 }}>  
               <Box sx={{ minWidth: 50, justifyContent:"space-around" }}>
                   <Card sx={{height:"500px", width:"300px", bgcolor:"rgba(0, 24, 157, 1)", borderRadius:"40px", margin:"10px"}}>

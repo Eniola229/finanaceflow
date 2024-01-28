@@ -28,7 +28,7 @@ function Contact() {
 }}>
   <Header/>
 
-    <Typography sx={{color:"white", fontSize:"66px", fontFamily:"monospace", fontWeight:"700"}}>
+    <Typography sx={{color:"white", fontSize:{ xs: '30px', md: '66px' }, fontFamily:"monospace", fontWeight:"700"}}>
       Get in touch
     </Typography>
       <Container sx={{
@@ -44,7 +44,7 @@ function Contact() {
       
        <Box sx={{display:"flex", flexWrap:"wrap"}}>
 
-        <Box sx={{ minWidth: 50, justifyContent: "space-around", display: "flex" }}>
+        <Box sx={{ minWidth: 50, justifyContent: "space-around", display: "flex", flexWrap:"wrap" }}>
       <Card sx={{ bgcolor: "transparent",  boxShadow: "none", margin: "10px", display:"flex", flexWrap:"wrap",  width:"70%" }}>
         <form style={{display:"flex", flexWrap:"wrap", justifyContent:"space-around"}}>
           <Box sx={{ height: "106px", display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
